@@ -1,0 +1,36 @@
+We can make our own custom keywords which we can use to run our required linux commands.
+For doing this we make a file of .sh like
+		.my-custom-commands.sh
+inside the file on first line write
+		
+		#!/bin/bash
+		
+This line gives info to shell on the use of appropriate interpreter
+
+inside the file write a function with it's name same as the custom command inside that write the commands 
+
+	function print_anything(){
+		echo "Your input: " $1
+	}
+
+$1 is any thing that is written after the use of keyword
+
+then make executable of file using 
+	
+	sudo chmod +x ./.my-custom-commands.sh
+
+then to make command available in terminal
+	
+	source ./.my-custom-commands.sh
+	
+Now just use the command in terminal 
+
+Example: write this in terminal
+	
+	print_anything Fahad
+
+output will be
+	
+	Your input: Fahad
+	
+29/04/2022 23:15:19 
